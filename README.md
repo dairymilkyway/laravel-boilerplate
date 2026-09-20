@@ -36,7 +36,7 @@ A production-ready Laravel starter kit with authentication, role-based access co
 **1. Clone the repository**
 
 ```bash
-git clone https://github.com/your-username/laravel-boilerplate.git
+git clone https://github.com/dairymilkyway/laravel-boilerplate.git
 cd laravel-boilerplate
 ```
 
@@ -181,7 +181,7 @@ The admin panel lives at `/admin` and is protected by `auth + verified + role:su
 | GET /admin/roles/{role}/edit | Edit role name and sync permissions |
 | PATCH /admin/roles/{role} | Apply role updates |
 
-Note: `/admin/roles/*` routes additionally require the `manage roles` permission. The `admin` role has `view roles` but not `manage roles`, so it can see the list but cannot edit roles.
+Note: `/admin/roles/*` routes require the `manage roles` permission. The `admin` role does not have this permission, so the Roles link is hidden from their sidebar entirely and all role routes return 403 if accessed directly.
 
 ---
 
